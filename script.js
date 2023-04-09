@@ -1,26 +1,33 @@
 const body = document.querySelector("body")
 const elementos = document.querySelectorAll(".campo");
 const form = document.querySelector("#form");
+const label_campo = document.querySelectorAll(".label_campo")
 
-body.style.width = "30vw"
+for (let i = 0; i < label_campo.length; i++) {
+    label_campo[i].style.width = "20%"
+}
+
+body.style.width = "45vw"
 body.style.margin = "auto";
 
 for (let i = 0; i < elementos.length; i++) {
-    elementos[i].style.display = "block";
+    elementos[i].style.display = "flex";
     elementos[i].style.marginBottom = "8px";
-    elementos[i].style.width = "100%";
-    elementos[i].style.resize = "none";
+    elementos[i].style.width = "90%";
+    elementos[i].style.resize = "none";  
+    elementos[i].style.boxSizing = "border-box"
+    elementos[i].style.alingItems = "center"
 }
 
 const campo = document.querySelectorAll(".insert")
 for (let i = 0; i < campo.length; i++) {
-    campo[i].style.width = "82%"
+    campo[i].style.width = "100%"
 }
 
 const button = document.getElementById("button-submit")
 button.style.backgroundColor = "#2ecc71"
 button.style.cursor = "pointer"
-button.style.width = "30vw"
+button.style.width = "100%"
 button.style.height = "32px"
 button.style.fontSize = "16px"
 button.style.textTransform = "uppercase"
